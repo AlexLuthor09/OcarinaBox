@@ -93,6 +93,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="OcarinaBox_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -119,6 +120,24 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-ocarina-alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ocarina.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\849ddb6bbb158e4e5c45b9b0d9e3-orig.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mission impossible theme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webalys-Kameleon.pics-Hacker.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace OcarinaBox
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OcarinaBox());
+            Application.Run(new OcarinaBBox());
         }
     }
 }

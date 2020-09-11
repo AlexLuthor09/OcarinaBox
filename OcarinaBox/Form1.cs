@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace OcarinaBox
 {
-    public partial class OcarinaBox : Form
+
+    public partial class OcarinaBBox : Form
     {
-        public OcarinaBox()
+        
+        SoundPlayer audio = new SoundPlayer(OcarinaBox.Properties.Resources.mission_impossible_theme);
+        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+        public OcarinaBBox()
         {
             InitializeComponent();
+            
         }
 
         //--------------fonction------------------------------------
@@ -34,11 +40,13 @@ namespace OcarinaBox
             progressBar1.Value = N_question;
 
         }
+       
+        
         void GoToSite(string url)
         {
             System.Diagnostics.Process.Start(url);
-
-        }
+            
+        } 
         void clear()
         {
             textBoxMP.Text = "";
@@ -63,7 +71,7 @@ namespace OcarinaBox
         string text7 = "Les hauts-dignitaires se doivent de connaître les noms de toutes les régios. Pour vérifier cela vous devez fournir les initiales des différentes régios dans l’ordre alphabétique (AAAAAAAAAAAA) ";
         string text8 = "Pour cette étape du protocole, on se demandait si vous saviez au moins où et quand se passait le congrès. Montrez nous que vous savez! (LieuJJ/MM/AAAA)";
         string text9 = "Pour terminer le protocole, nous tenions à vous rappeler la date de votre prochaine réunion. Ne nous remerciez pas surtout, c’est cadeau. Le code est donc la date de la prochaine commission congrès (JJ/MM/AAAA)";
-        string text10 = "Merci d'avoir participé et bonne vidéo , vous pouvez maintenant couper l'application :D";
+        string text10 = "Merci d'avoir participé et bonne vidéo , vous pouvez maintenant couper l'application :D" + " \n Vous avez mis : " ;
         //----------------------------------------------------------
         private void ValidationButton_Click(object sender, EventArgs e)
         {
@@ -121,11 +129,13 @@ namespace OcarinaBox
                     case "30/09/2020":                   //Vrai mot de passe
                         if (N_question == 9)
                         {
-                            label4.Text = (text10);                        
+                            label4.Text = (text10 + stopwatch.Elapsed.ToString());                        
                             clear();
                             GoToSite(video2);
                             N_question++;
                             progressBar1.Value = N_question;
+                            audio.Stop();
+                            stopwatch.Stop();
                             this.ControlBox = true;
                         }
                         break;
@@ -140,7 +150,9 @@ namespace OcarinaBox
                         {
                             
                             egnime(text1, site1);
-                        
+                            audio.PlayLooping();
+                            stopwatch.Start();
+
                         }
                         else  
                         {
@@ -156,6 +168,7 @@ namespace OcarinaBox
         private void OcarinaBox_Load(object sender, EventArgs e)
         {
             GoToSite(video1);
+          
         }
     }
 }
