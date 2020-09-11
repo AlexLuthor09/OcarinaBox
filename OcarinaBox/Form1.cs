@@ -19,6 +19,7 @@ namespace OcarinaBox
         System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
         public OcarinaBBox()
         {
+            
             InitializeComponent();
             
         }
@@ -121,7 +122,7 @@ namespace OcarinaBox
                         }
                         break;
                     case "Massembre16/10/2021":                   //Vrai mot de passe
-                        if (N_question == 8)
+                        if (N_question == 8 )
                         {
                             egnimeT(text9);
                         }
@@ -129,7 +130,7 @@ namespace OcarinaBox
                     case "30/09/2020":                   //Vrai mot de passe
                         if (N_question == 9)
                         {
-                            label4.Text = (text10 + stopwatch.Elapsed.ToString());                        
+                            label4.Text = (text10 + stopwatch.Elapsed.ToString().Substring(0, 8));                        
                             clear();
                             GoToSite(video2);
                             N_question++;
@@ -149,7 +150,7 @@ namespace OcarinaBox
                         else if (N_question == 0 && textBoxMP.Text != "")
                         {
                             
-                            egnime(text1, site1);
+                            egnime(text1 , site1);
                             audio.PlayLooping();
                             stopwatch.Start();
 
