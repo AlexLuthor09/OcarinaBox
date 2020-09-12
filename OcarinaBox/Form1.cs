@@ -129,7 +129,7 @@ namespace OcarinaBox
                     case "30/09/2020":                  
                         if (N_question == 9)
                         {
-                            label4.Text = (text10 + stopwatch.Elapsed.ToString().Substring(0, 8));                        
+                            label4.Text = (text10 + stopwatch.Elapsed.ToString().Substring(0, 10));                        
                             clear();
                             GoToSite(video2);
                             N_question++;
