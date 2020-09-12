@@ -80,54 +80,53 @@ namespace OcarinaBox
             {
                 switch (textBoxMP.Text)
                 {
-                    case  "centre":                   //mot de passe pour site 1 
+                    case  "centre":                   
                         if (N_question == 2)
                         {                           
                             egnime(text3, site3);
                         }
                         break;
 
-                    case "bonsplans":                   //mot de passe pour site 2
+                    case "bonsplans":                  
                         if (N_question == 3)
-                        {
-                           
+                        {                         
                             egnime(text4, site4);
                         }
                         break;
 
 
-                    case "225":                   //mot de passe pour site 3
+                    case "225":                   
                         if (N_question == 4)
                         {
                             egnimeT(text5);
                         }
                         break;
 
-                    case "preparation":                   //mot de passe pour site 4
+                    case "preparation":                  
                         if (N_question == 5)
                         {
                             egnimeT(text6);
                         }
                         break;
-                    case "sanfrancisco":                   //Vrai mot de passe
+                    case "sanfrancisco":                   
                         if (N_question == 6)
                         {
                             egnimeT(text7);
                         }
                         break;
-                    case "BBDEHLLMMNPTTV":                   //Vrai mot de passe
+                    case "BBDEHLLMMNPTTV":                  
                         if (N_question == 7)
                         {
                             egnimeT(text8);
                         }
                         break;
-                    case "Massembre16/10/2021":                   //Vrai mot de passe
+                    case "Massembre16/10/2021":                  
                         if (N_question == 8 )
                         {
                             egnimeT(text9);
                         }
                         break;
-                    case "30/09/2020":                   //Vrai mot de passe
+                    case "30/09/2020":                  
                         if (N_question == 9)
                         {
                             label4.Text = (text10 + stopwatch.Elapsed.ToString().Substring(0, 8));                        
@@ -168,8 +167,7 @@ namespace OcarinaBox
 
         private void OcarinaBox_Load(object sender, EventArgs e)
         {
-            GoToSite(video1);
-          
+            GoToSite(video1);      
         }
     }
 }
